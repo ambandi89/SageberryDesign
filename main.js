@@ -33,7 +33,7 @@ tl.to('.animated-element-left', {
 
 
 tl.from('.animated-element-right', {
-  x: 1500,
+  x: 500,
   duration: 0.5,
 })
 
