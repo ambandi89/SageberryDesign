@@ -1,0 +1,135 @@
+body {
+   background-color: #2e4057;
+   margin: 0;
+   padding: 0;
+}
+
+.patterns {
+  height: 100vh;
+}
+
+
+
+svg text {
+  font-family: Lora;
+  letter-spacing: 10px;
+  stroke: #ffa5d8;
+  font-size: 150px;
+  font-weight: 700;
+  stroke-width: 3;
+  text-transform: uppercase;
+  animation: textAnimate 5s infinite alternate;
+}
+
+@keyframes textAnimate {
+  0% {
+    stroke-dasharray: 0 50%;
+    stroke-dashoffset:  20%;
+    fill:hsl(189, 68%, 75%)
+
+  }
+  
+  100% {
+    stroke-dasharray: 50% 0;
+    stroke-dashoffset: -20%;
+    fill: hsla(189, 68%, 75%,0%);
+  }
+  
+}
+
+h1 {
+    text-align: center;
+    position: relative;
+    top: -600px;
+    color: #ffa5d8;
+    font-family: "Eczar", serif;
+}
+
+
+.btns {
+  display: block;
+  position: relative;
+  top: -480px;
+  margin: auto;
+  text-align: center;
+}
+
+button {
+  margin: 10px;
+  padding: 20px 70px;
+  position: relative;
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  background: #2e4057;
+  z-index: 0;
+  transition: 0.5s;
+}
+
+button:first-child {
+  border: 2px solid #ffa5d8;
+  color: #ffa5d8;
+  box-shadow: 0 0 20px 0 #ffa5d8;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 10px;
+  height: 10px;
+  transition: 0.5s;
+  background: #2e4057;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+button:first-child::before {
+  border: 2px solid #ffa5d8;
+}
+
+
+button::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  transition: 0.5s;
+  background: #2e4057;
+  border-radius: 50%;
+}
+
+button:first-child::after {
+  border: 2px solid #ffa5d8;
+}
+
+
+button:hover::before {
+  left: calc(100% - 5px);
+}
+
+button:hover::after {
+  right: calc(100% - 5px);
+}
+
+button:hover {
+  color: #000;
+}
+
+button:first-child:hover {
+  background: #ffa5d8;;
+  box-shadow: 0 0 60px 0 #ffa5d8;;
+}
+
+button a {
+  text-decoration: none;
+  color: #ffa5d8;
+}
+
+
